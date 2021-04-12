@@ -1,0 +1,333 @@
+
+/* 
+    Created on : Mar 17, 2021, 7:32:45 PM
+    Author     : Kary Johnson
+*/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.front-page, .overlay, 
+.form-box, form,
+.page-display, .content-box,
+.popup .pop-overlay,
+.popup .pop-content, 
+.popup .pop-container,
+.profile-display,
+.banner{
+    display: flex;
+}
+
+
+.front-page{
+    background-image: url("https://picsum.photos/1920/1080");
+    background-size: 100% 100vh;
+}
+
+.front-page, .overlay{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay{
+    position: fixed;
+    background: rgba(0,0,0,0.5);      
+    z-index: 1;
+}
+
+.form-box, form{
+    flex-direction: column;
+    align-items: center;
+}
+.form-box{
+    background: white;  
+    width: 50rem;
+    border-radius: 1rem;
+    justify-content:center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+form{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.heading{
+    font-size: 8rem;
+    color: #78e08f;
+}
+
+.custom-input, .custom-btn,
+.cust-text-area{
+    width: 35rem;
+    margin-bottom: 1rem;
+    border-radius: 0.1rem;
+}
+.custom-input, .custom-btn{
+    height: 4rem;
+}
+.custom-input, 
+.cust-text-area,
+.comm-text-area{    
+    background: whitesmoke;    
+    border: 1px gainsboro;
+    outline: none; 
+    padding: 1rem
+}
+
+.cust-text-area{
+    height: 10rem;
+    outline: none;
+    resize: none;
+}
+
+.custom-btn{
+    background: #78e08f;
+    border: none;
+    color: white;
+    font-size: 1.5rem
+}
+
+.custom-btn:hover{
+    background: #7bed9f;    
+}
+
+.link, .link:visited, 
+link:active,.error-msg{
+    color: #78e08f;
+    text-decoration: none;
+    font-size: 2rem
+}
+
+.link:hover{
+    color: #7bed9f; 
+}
+
+.error-msg{
+    margin: 1rem;
+    width: 30rem;
+    text-align: center;
+    font-size: 2rem;
+}
+/*********** Home Page *************/
+
+.banner{
+    width:100vw;
+    height:80vh;
+    background-image: url("https://picsum.photos/1920/1080");
+    background-size: 100% 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#welcome{
+    font-size: 5rem;
+    color: #78e08f;
+}
+
+/******************** Feed Page ***************/
+
+.page-display{
+    position: fixed;
+    width: 60%;    
+    top: 15%;
+    right: 0%;
+    height: 80%;
+    padding: 10rem;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    background: gainsboro;
+}
+
+.content-box{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 80vh;
+}
+.post-box{
+    height: 20rem;
+}
+
+.post-box:hover{
+    background: whitesmoke;
+}
+
+.poster-box{
+    width: 100%;
+    height: 5rem;
+}
+
+.post-box, .originalPost, .post-comm-box{
+    width: 70rem;    
+    background: white;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);        
+    font-size: 3rem;
+    padding: 1rem;
+    margin: 3rem;    
+}
+
+/******************** Comments ***************/
+
+.originalPost{
+    height: 30rem;
+}
+
+
+.comm-align{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 1rem;
+    font-size: 1.5rem;   
+}
+
+#view-comm-btn, .operate-btn{
+    background:black;
+    border: none;
+    outline: none;
+}
+
+#view-comm-btn:hover,
+.operate-btn:hover{
+    background: #2ed573;
+}
+.comm-text-area{
+    width:65rem;
+    height: 20rem;
+}
+
+/******************** Profile *****************/
+.profile-display{
+    width: 100vw;
+    height:80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    font-size: 2rem;
+}
+
+/***************** Admin page ***************/
+#admin-page{
+    align-items: flex-start;
+}
+
+table{
+    width: 90%;
+    border:none;
+    margin-top: 3rem;
+}
+
+th{
+    background: black;
+    color: white;
+    font-size: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+td{
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+#operations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.operate-btn{
+    color:white;
+    height: 3rem;
+    width: 7rem;
+    margin: 0.5rem;
+}
+
+.align-left{
+    text-align: left;
+}
+/********** Pop Up ***********/
+
+.popup .pop-overlay, 
+.popup .pop-content,
+.popup .pop-container{
+    justify-content: center;
+    align-items: center;
+}
+.popup .pop-overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+
+.popup .pop-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.popup .pop-content{
+    flex-direction: column;  
+    padding: 3rem;
+    background: white;
+    border-radius: 1rem;
+}
+
+.popup .pop-container, .popup .pop-content{
+     transform:translate(0%,0%) scale(0);
+}
+
+.popup .close-btn{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 3rem;
+    height: 3rem;
+    background: none;
+    border:none;
+    color:  white;  
+    margin: 0.5rem;
+    background: #78e08f; 
+}
+.popup.active .pop-overlay{
+    display: block;
+}
+
+.popup.active .pop-container, .popup.active .pop-content{
+    transition:all 300ms ease-in-out;
+    transform:translate(0%,0%) scale(1);
+}
+
+.popup .close-btn:hover{
+    background: #2ed573;
+}
+
+
+
+
+
+
+
+
+
+
+
